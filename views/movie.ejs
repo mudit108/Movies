@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title><%= movie.title %></title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg space-between bg-dark fixed-top">
+            <div class="container">
+                <div class="navbar-brand">
+                    <img src="assets/img/logo.png" alt="" srcset="">
+                </div>
+                <button class="navbar-toggler bg-dark-subtle" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse P-2" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto nav-tabs  ">
+                        <li class="nav-item"> <a href="/" class="nav-link ">HOME</a></li>
+                        <li class="nav-item"> <a href="/add-movie" class="nav-link active">ADD MOVIES</a></li>
+                        <li class="nav-item"> <a href="" class="nav-link">TV SHOWS</a></li>
+                        <li class="nav-item"> <a href="" class="nav-link">BLOG</a></li>
+                        <li class="nav-item"> <a href="" class="nav-link">PAGES</a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse p-2 justify-content-end">
+    
+                    <a href="" class="nav-link"><i class="ri-search-line text-light me-2"></i></a>
+                    <a href="" class="nav-link"><i class="ri-notification-line text-light me-2"></i></a>
+                    <a href="" class="nav-link"><img src="assets/img/user/download.jpg" alt="" srcset=""
+                            class="rounded-circle"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container " style="margin-top: 100px;">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="<%= movie.imageUrl %>" class="img-fluid" alt="<%= movie.title %>">
+            </div>
+            <div class="col-md-6">
+                <h1><%= movie.title %></h1>
+                <p><%= movie.description %></p>
+                <p><strong>Genre:</strong> <%= movie.genre %></p>
+                <p><strong>Year:</strong> <%= movie.year %></p>
+            </div>
+            <a href="/edit-movie/<%= movie._id %>" class="btn btn-warning mr-2">Edit</a>
+                <form action="/delete-movie/<%= movie._id %>" method="POST" style="display: inline;">
+                   <button type="submit" class="btn btn-danger">Delete</button> 
+               </form>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3 mt-4 bottom-0">
+        <p>&copy; 2024 StreamIt by Mudit</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+.navbar{
+    height: 80px;
+    background-color:black;
+    backdrop-filter: blur(5px);
+}
+.navbar  img{
+    height: 40px;
+}
+.collapse  a{
+    color: white;
+}
+
+.carousel .main-banner{
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.carousel .main-banner-1{
+    background-image: url(../img/slider/slider1.jpg);
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
+}
+.carousel .main-banner-1 .title-bg{
+    background: url(../img/texure.jpg);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.main-banner-part-1{
+    width: 90%;
+}
+
+
+svg#play {
+    width:50px;
+    display:block;
+    cursor: pointer;
+    transform-origin: 50% 50%;
+  }
+  
+  svg#play #triangle {
+    fill:rgba(22,22,22,0);
+    transition:500ms;
+    transform-origin: 50% 50%;
+  }
+  svg#play:hover #triangle {
+    fill:#FFF;
+    transform-origin: 50% 50%;
+  }
+  
+   svg #lineOne, svg #lineTwo {
+    transform-origin: 50% 50%;
+    transition: 1s;
+  } 
+  
+   svg:hover #lineOne {
+    transform: rotate(260deg);
+     -webkit-transform: rotate(260deg);
+  -moz-transform: rotate(260deg);
+  -o-transform: rotate(260deg);
+     transform-origin: 50% 50%;
+  } 
+  
+   svg:hover #lineTwo {
+    transform: rotate(-450deg);
+     transform-origin: 50% 50%;
+  } 
+
+.carousel .main-banner-2{
+    background-image: url(../img/slider/slider2.jpg);
+}
+.carousel .main-banner-2 .title-bg{
+    background: url(../img/texure.jpg);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+.carousel .main-banner-3{
+    background-image: url(../img/slider/slider3.jpg);
+}
+.carousel .main-banner-3 .title-bg{
+    background: url(../img/texure.jpg);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+.carousel .main-banner::after{
+background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(20, 20, 20, 0.9) 15%, rgba(83, 100, 141, 0) 100%);
+width: 100%;
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+}
+
+.top_ten_numbers{
+    position: absolute;
+    bottom: -65px;
+    right: 10px;
+    font-weight: var(--font-weight-extra-bold);
+    font-size: 7.5em;
+    color: red;
+    background-clip: text;
+    -webkit-background-clip: text;
+    line-height: normal;
+    transition: all .4s ease-out;
+    z-index: 2;
+}
